@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photo editing</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"   rel="stylesheet"/>
+
+</head>
+<body>
+    <div class="container disable">
+        <h2>simple photo edit</h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title">filter</label>
+                    <div class="option">
+                        <button id="brightness" class="active">brightness</button>
+                        <button id="saturation">saturation</button>
+                        <button id="inversion">inversion</button>
+                        <button  id="grayscale">grayscale</button>
+                    </div>
+                    <div class="silder">
+                        <div class="filter-info">
+                            <p class="name">brightness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="400">
+                    </div>
+                </div>
+             
+                <div class="rotate-flip">
+                    <label class="title">Rotate flip</label>
+                    <div class="option">
+                        <button><i class="ri-anticlockwise-2-line"></i></button>
+                        <button><i class="ri-clockwise-line"></i></button>
+                        <button><i class="ri-expand-left-right-fill"></i></button>
+                        <button><i class="ri-expand-up-down-fill"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-image">
+                <img src="image-placeholder.svg" alt="preview-img" >
+            </div>
+        </div>
+        <div class="controls">
+            <button class="reset-filter">Reset Filter</button>
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                <button class="choose-img">Choose image</button>
+                <button class="save-img">Save image</button>
+            </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
